@@ -1,11 +1,11 @@
 {
   "name": "nodebb-plugin-image-moderation",
-  "version": "0.3.1",
+  "version": "1.1.0",
   "description": "A simple plugin to allow posts based on image",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-plugin-quickstart"
+    "url": "https://github.com/Bharatrathi27412/nodebb-plugin-image-moderation"
   },
   "keywords": [
     "nodebb",
@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-plugin-quickstart/issues"
+    "url": "https://github.com/Bharatrathi27412/nodebb-plugin-image-moderation/issues"
   },
   "readmeFilename": "README.md",
   "nbbpm": {
