@@ -38,30 +38,11 @@ plugin.addAdminNavigation = function (header, callback) {
 };
 
 plugin.postQueue = async function ({ shouldQueue, uid, data }) {
-	// const cid = await getCid(data);
-	console.log(data);
 	try {
-		// if (
-		// 	plugin.settings[`${cid}-enabled`] && // general category setting
-		// 	!( // allow privileged users to bypass queue if enabled
-		// 		plugin.settings[`${cid}-privileged`] &&
-		// 		await user.isPrivileged(uid)
-		// 	) &&
-		// 	!( // allow exempt groups to bypass queue if enabled
-		// 		plugin.settings[`${cid}-exempt`] &&
-		// 		await groups.isMemberOfAny(uid, meta.config.groupsExemptFromPostQueue)
-		// 	) &&
-		// 	!( // don't queue replies if enabled
-		// 		plugin.settings[`${cid}-no-replies`] &&
-		// 		data.hasOwnProperty('tid')
-		// 	)
-		// ) 
 		if(!(await user.isPrivileged(uid)) &&
 			!(await groups.isMemberOfAny(uid, meta.config.groupsExemptFromPostQueue)) &&
-			!(data.hasOwnProperty('tid')) &&
 			(/\!\[.*\]\(.+\.(jpg|png|gif|jpeg)\)/i.test(data.req.body.content))	)
 		{
-			console.log('has an image')
 			shouldQueue = true;
 		}
 	} catch (err) {
