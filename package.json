@@ -1,7 +1,7 @@
 {
   "name": "nodebb-plugin-image-moderation",
-  "version": "1.2.0",
-  "description": "A simple plugin to allow posts based on image",
+  "version": "2.2.0",
+  "description": "A simple plugin to allow posts based on image and links",
   "main": "library.js",
   "repository": {
     "type": "git",
